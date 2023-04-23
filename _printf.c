@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	if (format == NULL)
-		return (0);
+		return (-1);
 
 	va_start(args, format);
 	len = strlen(format);
@@ -39,5 +39,6 @@ int _printf(const char *format, ...)
 		writ_char += write(1, &format[i], 1);
 	}
 	va_end(args);
+	printf("%d\n",writ_char);
 	return (writ_char);
 }
