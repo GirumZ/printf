@@ -36,10 +36,7 @@ int _printf(const char *format, ...)
 						writ_char += selected_fn(args);
 						i++;
 					}
-					if (selected_fn == NULL)
-					{
-						if (format[i + 1] == ' ' && !format[i + 2])
-							return (-1);
+					return (-1);
 				}
 				continue;
 			}
