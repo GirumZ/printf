@@ -39,6 +39,5 @@ int _printf(const char *format, ...)
 		writ_char += write(1, &format[i], 1);
 	}
 	va_end(args);
-	printf("%d\n",writ_char);
 	return (writ_char);
 }
