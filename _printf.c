@@ -23,6 +23,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			for (j = 0 ; j < 3 ; j++)
 			{
 				if (format[i + 1] == specifiers[j])
@@ -34,7 +36,6 @@ int _printf(const char *format, ...)
 						writ_char += selected_fn(args);
 						i++;
 					}
-					i++;
 				}
 				continue;
 			}
