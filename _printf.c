@@ -29,8 +29,11 @@ int _printf(const char *format, ...)
 				{
 					spec[0] = format[i + 1];
 					selected_fn = get_fun(spec);
-					writ_char += selected_fn(args);
-					i++;
+					if (selected_fn)
+					{
+						writ_char += selected_fn(args);
+						i++;
+					}
 				}
 				continue;
 			}
