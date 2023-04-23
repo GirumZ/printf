@@ -10,7 +10,7 @@ int _strlen(const char *str)
 	int i;
 
 	if (str == NULL)
-		return (_strlen("(null)"));
+		return (6);
 	for (i = 0 ; str[i] != '\0' ; i++)
 		;
 	return (i);
