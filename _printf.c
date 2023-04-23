@@ -31,8 +31,6 @@ int _printf(const char *format, ...)
 					selected_fn = get_fun(spec);
 					writ_char += selected_fn(args);
 					i++;
-					if ((i == (len - 1)) && j == 2)
-						return (-1);
 				}
 				continue;
 			}
