@@ -13,6 +13,6 @@ int print_string(va_list args)
 	str = va_arg(args, char *);
 
 	if (str == NULL)
-		str = "";
+		str = "(null)";
 	return (write(1, str, _strlen(str)));
 }
