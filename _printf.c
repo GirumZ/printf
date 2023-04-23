@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 						writ_char += selected_fn(args);
 						i++;
 					}
-					return (-1);
 				}
 				continue;
 			}
