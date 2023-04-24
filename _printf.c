@@ -23,8 +23,6 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			if (format[i + 1] == ' ')
-				continue;
 			for (j = 0 ; j < 3 ; j++)
 			{
 				if (format[i + 1] == specifiers[j])
