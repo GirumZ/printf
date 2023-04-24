@@ -4,12 +4,10 @@
  * @format: string containing the format specifiers
  * Return: the number of characters printed
  */
-
 int _printf(const char *format, ...)
 {
-	int i, j, len, writ_char = 0;
-	int (*selected_fn)(va_list args);
-	char *specifiers = "cs%";
+	int i, j, len, writ_char = 0, (*selected_fn)(va_list args);
+	char *specifiers = "csdi%";
 	char spec[1];
 	va_list args;
 
@@ -23,7 +21,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			for (j = 0 ; j < 3 ; j++)
+			for (j = 0 ; j < 5 ; j++)
 			{
 				if (format[i + 1] == specifiers[j])
 				{
