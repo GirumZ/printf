@@ -35,9 +35,8 @@ int _printf(const char *format, ...)
 					{
 						writ_char += selected_fn(args);
 						i++;
+						break;
 					}
-					else if (selected_fn == NULL)
-						return (-1);
 				}
 				continue;
 			}
