@@ -13,6 +13,9 @@ int _strlen(const char *str);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
+int print_number(va_list args);
+int digit_counter(int n);
+int real_print(int num);
 int (*get_fun(char *x))(va_list args);
 
 /**
