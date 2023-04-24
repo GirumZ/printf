@@ -11,12 +11,10 @@ int _printf(const char *format, ...)
 	int (*selected_fn)(va_list args);
 	char *specifiers = "cs%";
 	char spec[1];
-
 	va_list args;
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(args, format);
 	len = strlen(format);
 	for (i = 0 ; i < len ; i++)
@@ -25,18 +23,17 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
+			if (format[i + 1] == ' ')
+				continue;
 			for (j = 0 ; j < 3 ; j++)
 			{
 				if (format[i + 1] == specifiers[j])
 				{
 					spec[0] = format[i + 1];
 					selected_fn = get_fun(spec);
-					if (selected_fn)
-					{
-						writ_char += selected_fn(args);
-						i++;
-						break;
-					}
+					writ_char += selected_fn(args);
+					i++;
+					break;
 				}
 				continue;
 			}
