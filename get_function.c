@@ -14,9 +14,11 @@ int (*get_fun(char *x))(va_list args)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
+		{"d", print_number},
+		{"i", print_number},
 		{NULL, NULL}
 	};
-	for (i = 0 ; i < 3 ; i++)
+	for (i = 0 ; i < 5 ; i++)
 	{
 		if (strcmp(array[i].ch, x) == 0)
 			return (array[i].fn);
