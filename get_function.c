@@ -20,7 +20,7 @@ int (*get_fun(char *x))(va_list args)
 	};
 	for (i = 0 ; i < 5 ; i++)
 	{
-		if (strcmp(array[i].ch, x) == 0)
+		if (_strcmp(array[i].ch, x) == 0)
 			return (array[i].fn);
 	}
 	return (NULL);
