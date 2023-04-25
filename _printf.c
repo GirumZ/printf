@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j, len, writ_char = 0, (*selected_fn)(va_list args);
+	int i, j, writ_char = 0, (*selected_fn)(va_list args);
 	char *specifiers = "csdi%";
 	char spec[1];
 	va_list args;
@@ -14,8 +14,7 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(args, format);
-	len = strlen(format);
-	for (i = 0 ; i < len ; i++)
+	for (i = 0 ; format[i] != '\0' ; i++)
 	{
 		if (format[i] == '%')
 		{
