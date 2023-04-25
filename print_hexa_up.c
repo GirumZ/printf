@@ -22,6 +22,7 @@ int print_hexa_up(va_list args)
 	{
 		num /= 16;
 		byte++;
+		count++;
 	}
 	rev_hexaup = malloc(sizeof(char) * byte);
 	if (rev_hexaup == NULL)
@@ -37,7 +38,6 @@ int print_hexa_up(va_list args)
 	for (j = i ; j >= 0 ; j--)
 	{
 		write(1, &rev_hexaup[j], 1);
-		count++;
 	}
 	free(rev_hexaup);
 	return (count);
