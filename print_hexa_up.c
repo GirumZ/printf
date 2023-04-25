@@ -7,10 +7,11 @@
 
 int print_hexa_up(va_list args)
 {
-	int i, j, byte, num, num2, count = 0;
+	int i, j, byte, count = 0;
+	unsigned int num, num2;
 	char *rev_hexaup;
 
-	num = va_arg(args, int);
+	num = va_arg(args, unsigned int);
 	num2 = num;
 	if (num == 0)
 	{
