@@ -14,6 +14,7 @@ int _strcmp(char *s1, char *s2);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
+int print_binary(va_list args);
 int print_number(va_list args);
 int digit_counter(int n);
 int real_print(int num);
