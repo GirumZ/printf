@@ -30,7 +30,7 @@ int print_hexa_up(va_list args)
 	{
 		if ((num2 % 16) < 10)
 			rev_hexaup[i] = (num2 % 16) + '0';
-		if ((num2 % 16) >= 10)
+		else
 			rev_hexaup[i] = (num2 % 16) - 10 + 'A';
 		num2 /= 16;
 	}
