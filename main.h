@@ -9,7 +9,8 @@
 #include <string.h>
 
 int _printf(const char *format, ...);
-int _strlen(const char *str);
+int _strlen(char *str);
+int _strcmp(char *s1, char *s2);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
