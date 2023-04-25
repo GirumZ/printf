@@ -17,9 +17,13 @@ int (*get_fun(char *x))(va_list args)
 		{"d", print_number},
 		{"i", print_number},
 		{"b", print_binary},
+		{"u", print_unsigned},
+		{"o", print_octal},
+		{"x", print_hexa},
+		{"X", print_hexa_up},
 		{NULL, NULL}
 	};
-	for (i = 0 ; i < 6 ; i++)
+	for (i = 0 ; i < 10 ; i++)
 	{
 		if (_strcmp(array[i].ch, x) == 0)
 			return (array[i].fn);
