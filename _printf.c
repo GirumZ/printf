@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	int i, j, writ_char = 0, (*selected_fn)(va_list args);
-	char *specifiers = "csdi%";
+	char *specifiers = "csdib%";
 	char spec[1];
 	va_list args;
 
@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			for (j = 0 ; j < 5 ; j++)
+			for (j = 0 ; j < 6 ; j++)
 			{
 				if (format[i + 1] == specifiers[j])
 				{
