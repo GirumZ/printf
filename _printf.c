@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	char spec[1];
 	va_list args;
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(args, format);
 	len = strlen(format);
@@ -19,8 +19,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '\0')
-				return (-1);
 			for (j = 0 ; j < 5 ; j++)
 			{
 				if (format[i + 1] == specifiers[j])
