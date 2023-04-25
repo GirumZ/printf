@@ -23,7 +23,7 @@ int (*get_fun(char *x))(va_list args)
 		{"X", print_hexa_up},
 		{NULL, NULL}
 	};
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i < 11 ; i++)
 	{
 		if (_strcmp(array[i].ch, x) == 0)
 			return (array[i].fn);
